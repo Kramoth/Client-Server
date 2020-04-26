@@ -10,6 +10,6 @@ if __name__ == '__main__':
 	sock.listen(1)
 	conn, addr =sock.accept()
 	data=conn.recv(1024)
-	print(data.decode())
+	print("from %s : %s)"%(addr,data.decode()))
 	conn.send(b'receive')
 	sock.close()
